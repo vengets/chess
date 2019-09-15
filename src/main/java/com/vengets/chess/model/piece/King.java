@@ -1,7 +1,12 @@
 package com.vengets.chess.model.piece;
 
 public class King extends Piece {
-    String locomotionFormula() {
+
+    public King(PieceColor pieceColor) {
+        super(pieceColor);
+    }
+
+    String movementFormula() {
         return null;
     }
 }

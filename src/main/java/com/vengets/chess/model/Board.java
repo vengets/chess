@@ -5,15 +5,19 @@ public class Board {
     Square[][] squares;
 
     public Board() {
-        squares = new Square[8][8];
-        for(Square[] squareRow: squares) {
-            for(Square square: squareRow) {
-                square = new Square();
+        squares = new Square[8][];
+
+        for(int row=0; row<8; row++) {
+            squares[row] = new Square[8];
+
+            for(int col=0; col<8; col++) {
+                squares[row][col] = new Square(new Position(row, col));
             }
         }
     }
 
-
-
+    public Square[] getPossibleMoves(Square square) {
+        return null;
+    }
 
 }

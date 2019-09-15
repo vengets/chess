@@ -5,12 +5,17 @@ import com.vengets.chess.model.piece.Piece;
 public class Square {
   private Piece piece;
 
-  Square() {
+  Position position;
+
+  Square(Position position) {
+      this.position = position;
       piece = null;
   }
 
-  public void assign(Piece piece) {
-    this.piece = piece;
+  public Piece assign(Piece piece) {
+      Piece oldPiece = this.piece;
+      this.piece = piece;
+      return oldPiece;
   }
 
   public Piece retrieve() {

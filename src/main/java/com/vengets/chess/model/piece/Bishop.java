@@ -2,7 +2,11 @@ package com.vengets.chess.model.piece;
 
 public class Bishop extends Piece {
 
-    String locomotionFormula() {
+    public Bishop(PieceColor pieceColor) {
+        super(pieceColor);
+    }
+
+    String movementFormula() {
         return "+1";
     }
 }

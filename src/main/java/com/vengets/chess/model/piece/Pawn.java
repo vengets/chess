@@ -1,7 +1,11 @@
 package com.vengets.chess.model.piece;
 
 public class Pawn extends Piece {
-    String locomotionFormula() {
+    public Pawn(PieceColor pieceColor) {
+        super(pieceColor);
+    }
+
+    String movementFormula() {
         return null;
     }
 }

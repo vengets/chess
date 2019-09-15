@@ -2,8 +2,10 @@ package com.vengets.chess.model.piece;
 
 public abstract class Piece {
     boolean isAlive;
+    PieceColor pieceColor;
 
-    Piece() {
+    Piece(PieceColor pieceColor) {
+        this.pieceColor = pieceColor;
         isAlive = true;
     }
 
@@ -11,5 +13,6 @@ public abstract class Piece {
         isAlive = false;
     }
 
-    abstract String locomotionFormula();
+    abstract String movementFormula();
+
 }
